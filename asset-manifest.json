@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/novelBr/static/css/main.932534de.chunk.css",
+    "main.js": "/novelBr/static/js/main.646a6b98.chunk.js",
+    "main.js.map": "/novelBr/static/js/main.646a6b98.chunk.js.map",
+    "runtime-main.js": "/novelBr/static/js/runtime-main.e1caf09c.js",
+    "runtime-main.js.map": "/novelBr/static/js/runtime-main.e1caf09c.js.map",
+    "static/js/2.b9b400dc.chunk.js": "/novelBr/static/js/2.b9b400dc.chunk.js",
+    "static/js/2.b9b400dc.chunk.js.map": "/novelBr/static/js/2.b9b400dc.chunk.js.map",
+    "index.html": "/novelBr/index.html",
+    "precache-manifest.ca5d19aa4f789152a1a108413f067ac9.js": "/novelBr/precache-manifest.ca5d19aa4f789152a1a108413f067ac9.js",
+    "service-worker.js": "/novelBr/service-worker.js",
+    "static/css/main.932534de.chunk.css.map": "/novelBr/static/css/main.932534de.chunk.css.map",
+    "static/js/2.b9b400dc.chunk.js.LICENSE.txt": "/novelBr/static/js/2.b9b400dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1caf09c.js",
+    "static/js/2.b9b400dc.chunk.js",
+    "static/css/main.932534de.chunk.css",
+    "static/js/main.646a6b98.chunk.js"
+  ]
+}
