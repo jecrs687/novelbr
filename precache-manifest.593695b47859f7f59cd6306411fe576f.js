@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9443268813baedf340ffb7261301ff10",
+    "revision": "ae86be71f1057ed4c7513b88a9f20c36",
     "url": "/novelbr/index.html"
   },
   {
-    "revision": "df8b539ebbc5add4b306",
+    "revision": "67825bad3def787d60b2",
     "url": "/novelbr/static/css/main.932534de.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/novelbr/static/js/2.f2bf1e81.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df8b539ebbc5add4b306",
-    "url": "/novelbr/static/js/main.d7d92bac.chunk.js"
+    "revision": "67825bad3def787d60b2",
+    "url": "/novelbr/static/js/main.e49cf47e.chunk.js"
   },
   {
     "revision": "7926a327424d1e0b3c95",
