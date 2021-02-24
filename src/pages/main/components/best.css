@@ -1,0 +1,10 @@
+.best-container{
+    background-color: blueviolet;
+    width: 32vh;
+    flex-direction: column;
+    height: 45vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}

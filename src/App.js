@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './pages/Header'
+import Body from './pages/main/Body'
+import Novels from './pages/novels/Novel'
+import Novel from './pages/novel/Novel'
 import './App.css';
+import {Route, Switch, useLocation} from 'react-router-dom'
 
 function App() {
+  var lista = require('./list.json')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header className="navBar"/>
+      <Switch>
+        {Object.keys(lista).map((value, index)=> <Route key={index} path={`/novelbr/novel/${value.replace("(","___").replace(")", "---")}`} component={Novel}/>)}
+        <Route path="/novelbr/novel/" component={Novels}/>
+        <Route path="/" component={Body}/>
+      </Switch>
     </div>
   );
 }

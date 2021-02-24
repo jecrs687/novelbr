@@ -1,0 +1,10 @@
+.best {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    flex-direction: row;
+    height: 45vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}

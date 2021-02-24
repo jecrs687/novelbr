@@ -1,0 +1,94 @@
+.slide-container{
+    background-color: var(--complementary);
+    display:flex;
+    width: auto;
+    margin-top: 1rem;
+    margin-bottom:2rem;
+    height: 32vmax;
+    max-height: 80vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+.slide-container H1{
+    font-size: 100px;
+    color: white;
+}
+.slide-container img{
+    align-self: center;
+    resize: both;
+    image-rendering: pixelated;
+}
+.slide-container button{
+    position: absolute;
+    bottom:10px;
+    text-align: center;
+    height: 8vmin;
+    width: 6vmin;
+    font-size: 4vmin;
+    border-radius: 0.5vmin;
+    color: white;
+    background-color: var(--triadic);
+    border-style: none;
+    opacity: 1;
+}
+.slide-container button:hover{
+    text-align: left;
+    opacity: 0.9;
+    font-size: 4.2vmin;
+    cursor: pointer;
+    transition-duration: all 4s;
+}
+.slide-container .left{
+    left:15px;
+}
+.slide-container .right{
+    right:15px;
+}
+
+.slide-container .map{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #99999950;
+    height: 1.8vmin;
+    width: 10vmax;
+    bottom: 10px;
+    border-radius: 10vh;
+}
+
+.slide-container .map .active{
+    cursor: pointer;
+    height: 1vmax;
+    width: 1vmax;
+    border-radius: 0.5vmax;
+    bottom: 10px;
+    background-color: var(--primary);
+}
+.slide-container .map .desactive{
+    cursor: pointer;
+    height: 0.75vmax;
+    width: 0.75vmax;
+    border-radius: 0.375vmax;
+    bottom: 10px;
+    background-color: var(--secundary);
+}
+.slide-container img .visivel{
+    display:'null'
+}
+.slide-container img .invisivel{
+    display: flex;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+

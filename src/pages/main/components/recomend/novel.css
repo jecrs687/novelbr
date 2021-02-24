@@ -1,0 +1,36 @@
+.recomend-novel{
+    display: flex;
+    flex:1;
+    background-color: var(--secundary);
+    position: relative;
+    align-items: center;
+    height: 35vh;
+    justify-content: center;
+    margin-right: 2vw;
+    
+}
+.recomend-novel .image{
+    height: 35vh;
+}
+.recomend-novel .title{
+    height: 12vh;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #22222288;
+    display: flex;
+    font-size: auto;
+    color:white;;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+
+}
+.recomend-novel .title p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
