@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/novelbr/static/css/main.3275fb6d.chunk.css",
-    "main.js": "/novelbr/static/js/main.39ec2767.chunk.js",
-    "main.js.map": "/novelbr/static/js/main.39ec2767.chunk.js.map",
+    "main.js": "/novelbr/static/js/main.016b7e42.chunk.js",
+    "main.js.map": "/novelbr/static/js/main.016b7e42.chunk.js.map",
     "runtime-main.js": "/novelbr/static/js/runtime-main.1e33d63d.js",
     "runtime-main.js.map": "/novelbr/static/js/runtime-main.1e33d63d.js.map",
     "static/js/2.d785a1ed.chunk.js": "/novelbr/static/js/2.d785a1ed.chunk.js",
     "static/js/2.d785a1ed.chunk.js.map": "/novelbr/static/js/2.d785a1ed.chunk.js.map",
     "index.html": "/novelbr/index.html",
-    "precache-manifest.89628a74cfb6633b3adc9e50cf89528a.js": "/novelbr/precache-manifest.89628a74cfb6633b3adc9e50cf89528a.js",
+    "precache-manifest.d3d1aedc54765dea6703c3866ec5a7e6.js": "/novelbr/precache-manifest.d3d1aedc54765dea6703c3866ec5a7e6.js",
     "service-worker.js": "/novelbr/service-worker.js",
     "static/css/main.3275fb6d.chunk.css.map": "/novelbr/static/css/main.3275fb6d.chunk.css.map",
     "static/js/2.d785a1ed.chunk.js.LICENSE.txt": "/novelbr/static/js/2.d785a1ed.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1e33d63d.js",
     "static/js/2.d785a1ed.chunk.js",
     "static/css/main.3275fb6d.chunk.css",
-    "static/js/main.39ec2767.chunk.js"
+    "static/js/main.016b7e42.chunk.js"
   ]
 }
