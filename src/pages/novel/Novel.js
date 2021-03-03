@@ -1,11 +1,12 @@
 import React, {useState,useEffect} from 'react'
 import './Novel.css'
 import {useLocation} from 'react-router-dom'
-
+import Leitura from './components/leitura/leitura'
+import Main from './components/main/main'
 export default function Novel(){
-    var match = useLocation();
-    
-
+    var titulo = useLocation().search.split("TitleOF")[1];
+    var param = titulo.split("_")
+    var nome = param[0].replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ")
     const [novels, setDados] = useState(null)
     const [capitulo, setCapitulo] = useState(null)
     useEffect(()=>{
@@ -17,7 +18,6 @@ export default function Novel(){
         var status = xhr.status;
         if (status === 200) {
           setDados(xhr.response);
-          console.log("dados adquiridos")
         }
       };
     xhr.send();
@@ -27,33 +27,12 @@ export default function Novel(){
         var status = xhr2.status;
         if (status === 200) {
           setCapitulo(xhr2.response);
-          console.log("capitulos adquiridos")
-
         }
       };
     xhr2.send();},[])
-    // const novels = require('https://jecrs687.github.io/novelbr/links.json')
-    var nome = match.pathname.split('l/')[1].replace("___","(").replace("---",")")
-        return(
+    return(
             novels? 
-            <div className="main-novel">
-                <div>
-                    <img src={novels[nome]['imagem']} alt="imagem do novel">
-
-                    </img>
-                    <h1>
-                        {nome}
-                    </h1>
-                    <p>
-                        {novels[nome]['genero']? `gêneros: ${novels[nome]['genero'].map((value)=>value)}`:null}
-                    </p>
-                    <div>{novels[nome]['resumo'].map((value,index )=><p key={index}>{value}</p>)}</div>
-                </div>                
-                <div className="capitulos">
-                    
-                    {capitulo? Object.keys(capitulo[nome]).map((value, index)=><p key={index}><a href={`${match.pathname}/${index}`}>{value}</a></p>):null}
-                </div>
-
-            </div>:null
+                param[1]?
+                     <Leitura nome={nome} cap={param[param.length-1]}/>:<Main nome={nome} dados={novels[nome]} capitulos={capitulo} />:null
         )
 }

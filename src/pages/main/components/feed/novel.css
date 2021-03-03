@@ -98,9 +98,8 @@
         opacity: 1;
         align-self:center;
         background-color: #00000069;
-        
-        height: 68vw;
-        width: 65vw;
+        height: 65vw;
+        width: 62vw;
     }
     .novel-container .information a{
         font-weight: 700;

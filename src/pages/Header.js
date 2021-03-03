@@ -19,11 +19,11 @@ export default function Header(){
 							<FaAngleDoubleLeft className="icon"/>
 						</div>
 						<ul className='navBar-nav'>
-							<li  className='navBar-item'>
+							<li  className='navBar-item' onClick={()=>navigation('/novelbr')}>
 								<GoHome className='icon'/>
 								<span className='nav-link'>home</span>
 							</li>
-							<li className='navBar-item'  onClick={()=>navigation('/novelbr/novel')}>
+							<li className='navBar-item'  onClick={()=>navigation('/novelbr/?noveis')}>
 								<GoRepo className='icon'/>
 								<span className='nav-link'>Novels</span>
 							</li>
@@ -40,6 +40,7 @@ export default function Header(){
           <li className='navBar-item'  onClick={
             ()=>{    
 				document.body.style.setProperty('--background','#f1f1f1')
+				document.body.style.setProperty('--font','#333')
 
               document.body.style.setProperty('--primary','#a7ff83')
               document.body.style.setProperty('--secundary','#17b978')
@@ -53,8 +54,8 @@ export default function Header(){
           <li className='navBar-item' 
             onClick={
               ()=>{
-				document.body.style.setProperty('--background','#111')
-
+				document.body.style.setProperty('--background','#212121')
+				document.body.style.setProperty('--font','#fff')
                 document.body.style.setProperty('--secundary','#071a52')
                 document.body.style.setProperty('--primary','#086972')
                   document.body.style.setProperty('--triadic','#17b978')

@@ -1,0 +1,25 @@
+.capitulos{
+    text-decoration: none;
+    text-align: left;
+    margin-left: 10px;
+    padding-left: 5vw;
+}
+.main-novel a{
+    margin:0px;
+    border: 0px solid black;
+    color: black;
+    margin-bottom: 20px;
+    text-decoration: none;   
+    transition-duration: 1000ms;
+}
+.main-novel a:hover{
+    color: var(--triadic);    
+    border: 2px solid var(--triadic);
+
+}  
+@media screen and (max-width:600px){
+    .main-novel img{
+        width: 100%;
+        height: auto;
+    }
+}

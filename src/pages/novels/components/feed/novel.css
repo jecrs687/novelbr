@@ -84,6 +84,7 @@
         align-items: center;
         justify-content: center;
         color:white;
+        overflow: hidden;
         
     }
     .novel-container .image{
@@ -92,19 +93,22 @@
     }
     .novel-container .information{
         position: absolute;
-        margin-top: 10vw;
+        padding: 3vw;
         opacity: 1;
-        align-self:center;
+        overflow: hidden;
+        align-self:flex-end;
         background-color: #00000069;
-        
         height: 68vw;
-        width: 65vw;
+        width: 58vw;
     }
     .novel-container .information a{
         font-weight: 700;
         font-size: 1.4rem;
-        text-align: left;
         cursor: pointer;
+        text-align: justify;
+
+        color: aliceblue;
+        text-decoration: none;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -118,12 +122,12 @@
     .novel-container .information p{
         opacity: 0.7;
         font-weight: 500;
-        text-align: left;
+        text-align: justify;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
+        -webkit-line-clamp: 3;
     }
     .novel-container .cap{
         display: flex;

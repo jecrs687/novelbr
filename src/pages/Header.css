@@ -1,5 +1,4 @@
 /* nav bar */
-
 .navBar{
   z-index: 10;
   top: 0px;
@@ -129,27 +128,66 @@
     }
   }
   @media screen and (max-width: 600px) {
-    .navBar{
-      bottom: 0;
-      padding: 0;
-      width: 100vw;
-      height: 15vmin;
-      align-items: center;
-      justify-content: center;
-    }
-     .navBar-item:first-child {
-      display: flex;
-    }
-    .navBar .navBar-nav{
-      flex-direction: row;
-    }
-    .navBar .navBar-item{
-      display:flex;
-      align-items: center;
-      justify-items: center;
-    }
-    .navBar .navBar-item .icon{
-      width: 4vmin;
-    }
 
+    .navBar{
+      z-index: 10;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      position: fixed;
+      display: flex;
+      transition: 1000ms ease;
+      background-color:var(--secundary);
+      color:white;
+      height: 8vh;
+      
+      }
+      .box-logo .logo{
+        font-weight: 700;
+        }
+       .navBar-nav{
+        list-style: none;
+        padding: 0;
+        flex:1;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;  
+      }
+       .navBar-item{
+        flex: 1;
+        display: flex;
+        text-decoration: none;
+        height: 6vh;
+        align-items: center;
+        justify-content: center;
+      }
+      .navBar-item:first-child{
+        display: flex;
+
+      }
+       
+       .navBar-item:hover{
+        background-color: var(--triadic);
+        cursor: pointer;
+      }
+    
+    
+       .navBar-item .icon{
+        color: var(--complementary);  
+        filter: opacity(0.7) grayscale(0%);
+        transition:1000ms ease;
+      }
+
+       .navBar-item:hover .icon{
+        cursor: pointer;
+        filter: opacity(1) grayscale(100%);
+        color:white;
+      }
+    
+      .nav-link{
+        display:none;
+        margin-left: 1rem;
+      }
   }  

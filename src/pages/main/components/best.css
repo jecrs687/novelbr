@@ -8,3 +8,15 @@
     margin-left: 15px;
     margin-right: 15px;
 }
+@media screen and (max-width:600px){
+    .best-container{
+        background-color: blueviolet;
+        width: 90vw;
+        flex-direction: column;
+        height: 100vw;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
