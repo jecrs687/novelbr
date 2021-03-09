@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Header.css'
 // import { TiDocument } from "react-icons/ti";
 import {GoRepo,GoHome,GoProject} from "react-icons/go";
@@ -7,6 +7,28 @@ import {useHistory} from 'react-router-dom'
 
 export default function Header(){
 	    const [dark, setDark] = React.useState(0)
+		var theme = localStorage.getItem("--theme")
+		useEffect(()=>{
+			if(theme === "normal"){
+				setDark(0)
+				document.body.style.setProperty('--background','#f1f1f1')
+				document.body.style.setProperty('--font','#333')
+
+              document.body.style.setProperty('--primary','#a7ff83')
+              document.body.style.setProperty('--secundary','#17b978')
+                document.body.style.setProperty('--triadic','#086972')
+                document.body.style.setProperty('--complementary','#071a52')
+			}else{
+				document.body.style.setProperty('--background','#212121')
+				document.body.style.setProperty('--font','#fff')
+                document.body.style.setProperty('--secundary','#071a52')
+                document.body.style.setProperty('--primary','#086972')
+                  document.body.style.setProperty('--triadic','#17b978')
+                  document.body.style.setProperty('--complementary','#a7ff83')
+				setDark(1)
+			}
+		},[dark])
+		
 		let history = useHistory();
 		function navigation(local){
 			history.push(local)
@@ -39,14 +61,9 @@ export default function Header(){
 							{dark?          
           <li className='navBar-item'  onClick={
             ()=>{    
-				document.body.style.setProperty('--background','#f1f1f1')
-				document.body.style.setProperty('--font','#333')
-
-              document.body.style.setProperty('--primary','#a7ff83')
-              document.body.style.setProperty('--secundary','#17b978')
-                document.body.style.setProperty('--triadic','#086972')
-                document.body.style.setProperty('--complementary','#071a52')
-                setDark(!dark)
+				
+				localStorage.setItem("--theme", "normal")
+				setDark(!dark)
             }}>
               <FaMoon className='icon'/>
               <span className='nav-link' >Dark</span>
@@ -54,13 +71,9 @@ export default function Header(){
           <li className='navBar-item' 
             onClick={
               ()=>{
-				document.body.style.setProperty('--background','#212121')
-				document.body.style.setProperty('--font','#fff')
-                document.body.style.setProperty('--secundary','#071a52')
-                document.body.style.setProperty('--primary','#086972')
-                  document.body.style.setProperty('--triadic','#17b978')
-                  document.body.style.setProperty('--complementary','#a7ff83')
+				
                   setDark(!dark)
+				  localStorage.setItem("--theme", "dark")
               }
               }>
               <FaSun className='icon'/>

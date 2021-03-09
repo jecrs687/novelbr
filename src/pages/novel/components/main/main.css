@@ -1,13 +1,26 @@
+.main-novel{
+    color:var(--font);
+    text-align: justify;
+}
+.main-novel p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main-novel h1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .capitulos{
     text-decoration: none;
     text-align: left;
     margin-left: 10px;
     padding-left: 5vw;
+    color: var(--font);
 }
 .main-novel a{
     margin:0px;
     border: 0px solid black;
-    color: black;
+    color: var(--font);
     margin-bottom: 20px;
     text-decoration: none;   
     transition-duration: 1000ms;
@@ -17,6 +30,10 @@
     border: 2px solid var(--triadic);
 
 }  
+.main-novel img{
+    width: 100%;
+    height: auto;
+}
 @media screen and (max-width:600px){
     .main-novel img{
         width: 100%;

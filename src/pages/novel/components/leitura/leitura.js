@@ -1,12 +1,17 @@
 import React, {useState,useEffect} from 'react'
 import './leitura.css'
 import {useLocation} from 'react-router-dom'
+import {GoArrowLeft,GoArrowRight} from "react-icons/go";
+import {FaAngleDoubleLeft} from "react-icons/fa";
 
 export default function Leitura({nome, cap}){
     const [capitulo, setDados] = useState()
     const [capitulos, setCapitulo] = useState(null)
+    const [buttom, setButtom]  = useState(false)
+
     var match = useLocation().search.split("_")
     match = match[0]
+    var fontSize = localStorage.getItem("fontSize");
 
     useEffect(()=>{
         var receber = nome
@@ -32,25 +37,45 @@ export default function Leitura({nome, cap}){
             }
         };
         xhr2.send();
-    },[nome, cap])
-    // const novels = require('https://jecrs687.github.io/novelbr/links.json')
+        var fontSize = localStorage.getItem("fontSize");
+        if(!fontSize) {localStorage.setItem("fontSize", "16px");}
+        document.body.style.setProperty('--fontSize', fontSize)
 
+    },[nome, cap,fontSize])
+    // const novels = require('https://jecrs687.github.io/novelbr/links.json')
+    function font(expressao){
+        fontSize = fontSize.replace("px", "");
+        fontSize = Number(fontSize)
+        
+        if(expressao) 
+        fontSize = fontSize + 2
+        else
+        if (fontSize>0) 
+        fontSize = fontSize - 2
+
+        fontSize = fontSize + "px"
+        document.body.style.setProperty('--fontSize', fontSize)
+        localStorage.setItem("fontSize", fontSize)
+    }
     return(
         capitulo?
             <div className="main-leitura">
-                <div className="changes">
-                    <button className="font">+</button>
-                    <button className="font">-</button>
+                <div className={buttom? "active":"disable"} >
+                    <div className="seta" onClick={()=>{setButtom(!buttom)}}>
+                            <FaAngleDoubleLeft className= 'setaMain'/>
+                    </div>
+                    <button onClick={()=>{font(true)}} className="buttomFont">+</button>
+                    <button onClick={()=>{font(false)}} className="buttomFont">-</button>
                 </div>
                 <h1>
                     {Object.keys(capitulo).map(value=>value)}</h1>
-                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)-1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)-1}`}>Anterior</a>:null:null}
-                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)+1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)+1}`}>Proximo</a>:null:null}
+                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)-1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)-1}`}><GoArrowLeft className="apontador"/></a>:null:null}
+                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)+1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)+1}`}><GoArrowRight className="apontador"/></a>:null:null}
                
               {Object.keys(capitulo).map(value=>capitulo[value].map((value2, index)=><p key={index}>{value2}</p>))}
-               {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)-1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)-1}`}>Anterior</a>:null:null}
-                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)+1]?<a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)+1}`}>Proximo</a>:null:null}
-                
+     
+              {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)-1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)-1}`}><GoArrowLeft className="apontador"/></a>:null:null}
+                {capitulos? Object.keys(capitulos[nome])[Number.parseInt(cap)+1]? <a className="buttom" href={`/novelbr/${match}_${Number.parseInt(cap)+1}`}><GoArrowRight className="apontador"/></a>:null:null}
             </div>:null
         )
 }

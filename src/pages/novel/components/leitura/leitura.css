@@ -4,6 +4,7 @@
 
 }
 .main-leitura p{
+    font-size: var(--fontSize);
     text-align: justify;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -22,13 +23,70 @@
 	font-family:Arial;
 	font-size:medium;
 	font-weight:bold;
-	padding:10px 18px;
+	padding:2px 4px;
 	text-decoration:none;
 	text-shadow:0px 3px 0px var(--complementary);
 }
 
-.main-leitura .changes {
+.main-leitura .active {
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 90px;
     right: 0px;
-    
+    transition-duration: 1000ms ;
 }
+
+.main-leitura .disable {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 90px;
+    right: -57px;
+    transition-duration: 1000ms ;
+}
+
+.main-leitura .active .buttomFont{
+    margin: auto;
+}
+.main-leitura .disable .buttomFont{
+  margin: auto;
+
+}
+.main-leitura .disable:hover {
+
+    right: 0px;
+    transition-duration: 1000ms ;
+}
+.main-leitura .seta{
+    display: flex;
+    margin: auto;
+    color: var(--background);  
+    flex-direction: column;
+    width: 30px;
+    background-color: var(--triadic);
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius:  10px 0px 0px 10px;
+}
+.main-leitura  .apontador{
+
+    color: var(--background);
+    width: 50px;
+    height: 30px;
+}
+.main-leitura .active .setaMain{
+    display:block;
+    color: var(--background);  
+    transform: rotate(180deg);
+    transition:transform 2000ms ease;
+  }
+  .main-leitura .disable:hover .setaMain{
+    transform: rotate(180deg);
+    transition:transform 2000ms ease;
+  }
+  .main-leitura .disable .setaMain{
+    transform: rotate(0deg);
+    transition:transform 2000ms ease;
+    }
