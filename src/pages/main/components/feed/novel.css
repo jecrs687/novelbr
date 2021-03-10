@@ -6,15 +6,52 @@
     background-color:var(--triadic);
     background: linear-gradient(215deg,var(--secundary),25%,var(--triadic),80%,var(--secundary));
     cursor: pointer;
+
+}
+.novel-container .capitulos{
+    position:absolute;
+    z-index: 2;
+    top:-10px;
+    right: -10px;
+} 
+.novel-container .capitulos .capitulo{
+    font-size: 40px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--font);
+    background-color: var(--secundary);
+    width: 5vmin;
+    height: 5vmin;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 3px 1px 9px #111111 ;
+    transition-duration: 1000ms;
+
+}
+.novel-container .capitulos .capitulo:first-child{
+    margin-top: 0px;
+}
+.novel-container .capitulos .capitulo:hover{
+    transition-duration: 1000ms;
+    background-color: var(--triadic);
+    box-shadow: 0px 0px 0px 0px #111111 ;  
+}
+.novel-container .capitulos .capitulo a{
+    font-size: 5vmin;
+    text-decoration: none;
+    color: var(--font);
 }
 @media screen and (min-width:400px){
 .novel-container{
+    position: relative;
     padding: 3vmin;
     margin:10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .novel-container .image{
     display: flex;
@@ -75,32 +112,25 @@
     cursor: pointer;
     background-color: var(--secundary);
 }
+
 }
 @media screen and (max-width:400px){
     .novel-container{
-        padding: 8px;
-        display: flex;
-        max-height: 80vh;
-        max-width: 90vw;
-        margin-bottom: 30px;
-        align-items: center;
-        justify-content: center;
-        color:white;
-        
+        position: relative;
+        width: 80vw;
     }
-    .novel-container .image{
-        height: 80vw;
-        width: 65vw;
+    .novel-container div .image{
+        width: 75vw;
+        height:auto;
     }
     .novel-container .information{
-        position: absolute;
-        margin-top: 10vw;
+        position: relative;
+        flex:1;
         opacity: 1;
-        align-self:center;
         background-color: #00000069;
-        height: 65vw;
-        width: 62vw;
+        z-index: 1;
     }
+
     .novel-container .information a{
         font-weight: 700;
         font-size: 1.4rem;

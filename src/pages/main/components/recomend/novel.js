@@ -2,13 +2,11 @@ import React from 'react'
 import './novel.css'
 
 
-async function getHtml(){return fetch("saikaiscan.com.br").then(res => console.log(res))}
-export default function nove(){
+export default function Novel(){
     return(
         <div className="recomend-novel">
             <div className="title">
                 <p>
-                    {()=>(getHtml())}
                    Dungeons and dragons    
                 </p>
             </div>

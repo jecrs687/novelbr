@@ -46,8 +46,8 @@ export default function Slide(){
                 { images.map(
                         (value, index)=>(
                             index===image?
-                            <div onClick={()=>{nav(index)}} className="active"/>:
-                            <div onClick={()=>{nav(index)}} className="desactive"/>
+                            <div key={index} onClick={()=>{nav(index)}} className="active"/>:
+                            <div key={index} onClick={()=>{nav(index)}} className="desactive"/>
                         )
                     )
                 }

@@ -27,7 +27,7 @@ export default function Header(){
                   document.body.style.setProperty('--complementary','#a7ff83')
 				setDark(1)
 			}
-		},[dark])
+		},[dark,theme])
 		
 		let history = useHistory();
 		function navigation(local){
@@ -53,7 +53,7 @@ export default function Header(){
 								<TiDocument className='icon'/>
 								<span className='nav-link'>TOP</span>
 							</li> */}
-							<li className='navBar-item'>
+							<li className='navBar-item' onClick={()=>navigation('/novelbr/?categorias')}>
 								<FaBrain className='icon'/>
 								<span className='nav-link'>Categorias</span>
 							</li>
@@ -80,7 +80,7 @@ export default function Header(){
               <span className='nav-link' >light</span>
             </li>
         }
-								<li className='navBar-item'>
+								<li className='navBar-item' onClick={()=>navigation('/novelbr/?perfil')}>
 								<GoProject className="icon"/>
 								<span className='nav-link' >Perfil</span>
 							</li>

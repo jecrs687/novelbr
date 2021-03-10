@@ -26,7 +26,7 @@
 }
 .slide-container img{
     align-self: center;
-    resize: both;
+    object-fit:cover;
     image-rendering: pixelated;
 }
 .slide-container button{

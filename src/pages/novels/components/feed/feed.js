@@ -2,8 +2,7 @@ import React from 'react'
 import './feed.css'
 import Novel from './novel'
 
-const novels = require('../../../../list.json')
-export default function Feed(){
+export default function Feed(novels){
     // const [test, setTest] = useState('temp')
     return(
         <div className="feed-container">

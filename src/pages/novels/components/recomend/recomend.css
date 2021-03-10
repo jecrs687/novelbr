@@ -1,9 +1,0 @@
-.recomend-container{
-    flex:1;
-    background-color: var(--complementary);
-    display:flex;
-    height: 20vmax;
-    align-items: center;
-    padding: 1vmax;
-    overflow: hidden;
-}
